@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FileShare - Unggah dan Bagikan File</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>FileShare</h1>
+            <p class="subtitle">Unggah file dan dapatkan link yang dapat dibagikan</p>
+        </header>
+        
+        <div class="upload-area">
+            <div class="upload-box" id="dropArea">
+                <div class="upload-icon">📁</div>
+                <p class="upload-text">Seret file ke sini atau klik untuk memilih</p>
+                <p>Maksimal 25MB per file</p>
+                <input type="file" id="fileInput" class="file-input">
+                <button class="btn" id="selectFileBtn">Pilih File</button>
+            </div>
+            <div class="file-info" id="fileInfo" style="display: none;">
+                <p><strong>File terpilih:</strong> <span id="fileName"></span></p>
+                <p><strong>Ukuran:</strong> <span id="fileSize"></span></p>
+            </div>
+            <button class="btn" id="uploadBtn" style="display: none;">Unggah File</button>
+            <div class="loading" id="loading" style="display: none;">
+                <div class="spinner"></div>
+                <p>Mengunggah file...</p>
+            </div>
+        </div>
+        
+        <div class="result-area" id="resultArea" style="display: none;">
+            <h2 class="result-title">File Anda telah diunggah!</h2>
+            <div id="previewContainer"></div>
+            <div class="link-box">
+                <span class="link-text" id="linkText"></span>
+                <button class="copy-btn" id="copyBtn">Salin</button>
+            </div>
+            <div class="file-details" id="fileDetails">
+                <p><strong>Nama File:</strong> <span id="detailName"></span></p>
+                <p><strong>Ukuran:</strong> <span id="detailSize"></span></p>
+                <p><strong>Jenis:</strong> <span id="detailType"></span></p>
+            </div>
+            <p class="expiry-info">Link ini akan aktif selama file tersimpan di server</p>
+            <button class="btn btn-secondary" id="newUploadBtn">Unggah File Baru</button>
+        </div>
+        
+        <div class="info-area">
+            <h3 class="info-title">Tentang FileShare</h3>
+            <p class="info-text">FileShare memungkinkan Anda mengunggah file dan mendapatkan link yang dapat dibagikan dengan mudah.</p>
+            <p class="info-text">File yang didukung: gambar, PDF, dokumen, video, audio, dan lainnya.</p>
+            <div class="file-info">
+                <p>Dibuat dengan ❤️ untuk berbagi file dengan mudah</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+  </html>
